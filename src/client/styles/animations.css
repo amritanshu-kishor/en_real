@@ -1,0 +1,93 @@
+/* Deliberate, Subtle Editorial Motion & Audio Visualizations */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseRecording {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+@keyframes speakingPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 92, 43, 0.5);
+    border-color: #FF5C2B;
+  }
+  60% {
+    box-shadow: 0 0 0 8px rgba(255, 92, 43, 0);
+    border-color: #FF7A52;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 92, 43, 0);
+    border-color: #FF5C2B;
+  }
+}
+
+@keyframes alertBorder {
+  0%, 100% {
+    border-color: var(--tone-danger-border);
+  }
+  50% {
+    border-color: var(--tone-danger);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.animate-speaking-pulse {
+  animation: speakingPulse 1.8s infinite ease-in-out;
+}
+
+.animate-pulse-complication {
+  animation: alertBorder 2s infinite ease-in-out;
+}
+
+/* Interactive Card Elevations */
+.scenario-card-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.15s ease;
+}
+
+.scenario-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  border-color: var(--border-strong);
+}
+
+/* Reduced Motion Respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
