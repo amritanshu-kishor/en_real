@@ -1,112 +1,82 @@
 :root {
-  /* ==========================================================================
-     PREMIUM BRUTALIST DESIGN SYSTEM
-     Palette:
-       — VOID BLACK:   #0C0C0C
-       — PURE WHITE:   #F5F5F0
-       — ELECTRIC ORANGE:  #FF5C2B
-       — MID GREY:     #1A1A1A
-       — BORDER GREY:  #2A2A2A
-  ========================================================================== */
+  --bg-canvas: #111116;
+  --bg-primary: #111116;
+  --bg-secondary: #1b1a22;
+  --bg-tertiary: #24232d;
+  --bg-surface: #211f29;
+  --bg-surface-subtle: #191820;
+  --bg-surface-elevated: #2a2833;
+  --bg-surface-muted: rgba(255,255,255,0.04);
+  --bg-surface-tint: rgba(123,67,255,0.12);
 
-  /* Canvas & Surfaces */
-  --bg-canvas:            #0C0C0C;
-  --bg-primary:           #0C0C0C;
-  --bg-secondary:         #141414;
-  --bg-tertiary:          #1A1A1A;
+  --bg-glass-header: rgba(17,17,22,0.88);
+  --bg-glass-surface: #211f29;
+  --bg-glass-card: #211f29;
+  --bg-glass-panel: #1b1a22;
+  --bg-glass-modal: #191820;
+  --bg-dark: #0e0e12;
+  --bg-dark-surface: #17161e;
 
-  --bg-surface:           #111111;
-  --bg-surface-subtle:    #161616;
-  --bg-surface-elevated:  #1E1E1E;
-  --bg-surface-muted:     rgba(255,255,255,0.03);
-  --bg-surface-tint:      rgba(255,92,43,0.04);
+  --text-primary: #f5f3f8;
+  --text-strong: #ffffff;
+  --text-secondary: #aaa7b5;
+  --text-muted: #797684;
+  --text-faint: #55535e;
+  --text-inverse: #111116;
+  --text-dark-primary: #f5f3f8;
+  --text-dark-secondary: #aaa7b5;
 
-  /* Glass — kept for compat but stripped of blur */
-  --bg-glass-header:      #0C0C0C;
-  --bg-glass-surface:     #111111;
-  --bg-glass-card:        #111111;
-  --bg-glass-panel:       #141414;
-  --bg-glass-modal:       #0C0C0C;
+  --accent-primary: #713cff;
+  --accent-hover: #875cff;
+  --accent-secondary: #8cda00;
+  --accent-blue: #713cff;
+  --accent-cyan: #713cff;
+  --accent-rose: #ff9a19;
+  --accent-rose-hover: #ffad43;
+  --accent-cobalt: #713cff;
+  --accent-cobalt-hover: #875cff;
+  --accent-cobalt-dark: #612de8;
+  --accent-cobalt-tint: rgba(113,60,255,0.14);
+  --accent-cobalt-subtle: rgba(113,60,255,0.2);
+  --accent-gradient: linear-gradient(135deg,#713cff 0%,#8d49ff 100%);
+  --accent-gradient-hover: linear-gradient(135deg,#875cff 0%,#a15cff 100%);
 
-  --bg-dark:              #080808;
-  --bg-dark-surface:      #101010;
+  --tone-danger: #ff5b67;
+  --tone-danger-text: #ff7b83;
+  --tone-danger-tint: rgba(255,91,103,0.12);
+  --tone-danger-border: rgba(255,91,103,0.35);
+  --tone-success: #8cda00;
+  --tone-success-text: #a4e934;
+  --tone-success-tint: rgba(140,218,0,0.12);
+  --tone-success-border: rgba(140,218,0,0.35);
+  --tone-warning: #ff9a19;
+  --tone-warning-text: #ffb34e;
+  --tone-warning-tint: rgba(255,154,25,0.12);
+  --tone-warning-border: rgba(255,154,25,0.35);
 
-  /* Typography */
-  --text-primary:         #F5F5F0;
-  --text-strong:          #FFFFFF;
-  --text-secondary:       #8C8C8C;
-  --text-muted:           #555555;
-  --text-faint:           #3A3A3A;
-  --text-inverse:         #0C0C0C;
-  --text-dark-primary:    #F5F5F0;
-  --text-dark-secondary:  #8C8C8C;
+  --border-subtle: #282630;
+  --border-base: #35333e;
+  --border-strong: #494652;
+  --border-dark: #713cff;
+  --border-hover: #875cff;
+  --backdrop-blur: blur(18px);
+  --backdrop-blur-sm: blur(10px);
+  --shadow-subtle: 0 2px 8px rgba(0,0,0,0.14);
+  --shadow-card: 0 8px 26px rgba(0,0,0,0.18);
+  --shadow-elevated: 0 14px 36px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 32px rgba(113,60,255,0.25);
+  --shadow-rose-glow: 0 0 24px rgba(255,154,25,0.2);
 
-  /* Accent: ELECTRIC ORANGE + White */
-  --accent-primary:       #FF5C2B;
-  --accent-hover:         #FF7A52;
-  --accent-secondary:     #FF5C2B;
-  --accent-blue:          #FF5C2B;
-  --accent-cyan:          #FF5C2B;
-  --accent-rose:          #FF5C2B;
-  --accent-rose-hover:    #FF7A52;
-  --accent-cobalt:        #FF5C2B;
-  --accent-cobalt-hover:  #FF7A52;
-  --accent-cobalt-dark:   #FF7A52;
-  --accent-cobalt-tint:   rgba(255,92,43,0.08);
-  --accent-cobalt-subtle: rgba(255,92,43,0.14);
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', SFMono-Regular, Consolas, monospace;
 
-  /* No gradient — brutalism is flat */
-  --accent-gradient:       linear-gradient(90deg,#FF5C2B 0%,#FF5C2B 100%);
-  --accent-gradient-hover: linear-gradient(90deg,#FF7A52 0%,#FF7A52 100%);
-
-  /* Semantic — map everything to white/yellow */
-  --tone-danger:          #FF4040;
-  --tone-danger-text:     #FF6B6B;
-  --tone-danger-tint:     rgba(255,64,64,0.1);
-  --tone-danger-border:   rgba(255,64,64,0.4);
-
-  --tone-success:         #FF5C2B;
-  --tone-success-text:    #FF5C2B;
-  --tone-success-tint:    rgba(255,92,43,0.08);
-  --tone-success-border:  rgba(255,92,43,0.3);
-
-  --tone-warning:         #FF5C2B;
-  --tone-warning-text:    #FF5C2B;
-  --tone-warning-tint:    rgba(255,92,43,0.08);
-  --tone-warning-border:  rgba(255,92,43,0.3);
-
-  /* Borders — raw, structural */
-  --border-subtle:        #1E1E1E;
-  --border-base:          #2A2A2A;
-  --border-strong:        #3D3D3D;
-  --border-dark:          #FF5C2B;
-  --border-hover:         #FF5C2B;
-
-  /* No blur — brutalism is crisp */
-  --backdrop-blur:        blur(0px);
-  --backdrop-blur-sm:     blur(0px);
-
-  /* Shadows — minimal, grounded */
-  --shadow-subtle:        0 1px 0 #1E1E1E;
-  --shadow-card:          0 0 0 1px #2A2A2A;
-  --shadow-elevated:      0 0 0 1px #FF5C2B;
-  --shadow-glow:          none;
-  --shadow-rose-glow:     none;
-
-  /* Typography — Industrial Brutalist Stack */
-  --font-serif:           'Newsreader', Georgia, serif;
-  --font-display:         'Space Grotesk', 'Barlow', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body:            'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono:            'JetBrains Mono', 'IBM Plex Mono', SFMono-Regular, Consolas, monospace;
-
-  /* Radii — sharp / square */
-  --radius-xs:            2px;
-  --radius-sm:            2px;
-  --radius-md:            2px;
-  --radius-lg:            2px;
-  --radius-pill:          2px;
-
-  /* Transitions */
-  --transition-quick:     0.12s ease;
-  --transition-smooth:    0.2s ease;
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --transition-quick: 0.16s ease;
+  --transition-smooth: 0.24s ease;
 }

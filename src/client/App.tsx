@@ -71,6 +71,7 @@ export const App: React.FC = () => {
             }}
             onExploreScenarios={() => setCurrentTab('scenarios')}
             onOpenDna={() => setCurrentTab('dna')}
+            onSelectMode={(mode) => setCurrentTab(mode)}
           />
         )}
 
